@@ -241,7 +241,7 @@ function courseHome(){
   <div class="crumb"><a href="${ROOT}index.html">All courses</a> / ${esc(C.cat)}</div>
   <section class="hero" style="padding-top:28px">
    <div>
-    <div class="eyebrow"><span class="beta">BETA</span> Comic course · ${esc(C.cat)}</div>
+    <div class="eyebrow"><span class="beta">PREVIEW</span> Comic course · ${esc(C.cat)}</div>
     <h1>Learn <em>${esc(C.title)}</em> as a comic.</h1>
     <p class="lead">${esc(C.tagline)} Start with the big picture, pick topics to go deeper, then beat the boss.</p>
     <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn" id="start">${started?'Continue ▸':'Start episode 0 ▸'}</button>${started?'<button class="btn ghost" id="restart">Start over</button>':''}</div>
@@ -424,7 +424,7 @@ function catalog(){
   const progress=id=>{try{const s=JSON.parse(localStorage.getItem('koma.c.'+id)||'null');if(!s)return 0;const d=Object.keys(s.done||{}).length;return s.mission?100:Math.min(95,(s.seenOverview?20:0)+d*25)}catch(e){return 0}};
   app.innerHTML=`<div class="wrap fade">
    <section class="cathero">
-    <div class="eyebrow"><span class="beta">BETA</span> Learn anything · panel by panel</div>
+    <div class="eyebrow"><span class="beta">PREVIEW</span> Learn anything · panel by panel</div>
     <h1>Every subject, <em>as your own comic.</em></h1>
     <p>Pick a course. Read the big picture as a comic, choose what to go deeper on, then prove it in interactive episodes and boss battles. Anime or comic style. Free.</p>
     <form class="field" id="sf" style="max-width:560px"><input id="q" placeholder="Search courses… e.g. Python, investing, leadership" aria-label="Search courses" autocomplete="off"><button class="btn" type="submit">Search</button></form>
